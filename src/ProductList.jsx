@@ -322,6 +322,11 @@ function ProductList() {
             {" "}
             <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
               <h1 className="cart">
+                {Object.keys(addedToCart).length > 0 && (
+                  <span className="cart_quantity_count">
+                    {Object.keys(addedToCart).length}
+                  </span>
+                )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 256 256"
